@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "description": [
+      {"color": "dark_aqua", "text": "Convert any and every item and block into a hat or helmet."},
+      {"color": "yellow", "text": " -by Taymaz"}
+    ],
+    "min_format": [88, 0],
+    "max_format": [101, 1]
+  }
+}
