@@ -1,0 +1,33 @@
+{
+  "function": "minecraft:sequence",
+  "functions": [
+    {
+      "function": "minecraft:set_components",
+      "components": {
+        "minecraft:equippable": {
+          "slot": "head"
+        }
+      }
+    },
+    {
+      "function": "minecraft:set_lore",
+      "entity": "this",
+      "lore": [
+        {
+          "text": "Equippable as a hat",
+          "color": "light_purple",
+          "italic": false
+        }
+      ],
+      "mode": "replace_all"
+    },
+    {
+      "function": "minecraft:set_custom_data",
+      "tag": {
+        "hatcraft.is_hat": true,
+        "hatcraft.is_simple_hat": true,
+        "hatcraft.is_helmet_hat": false
+      }
+    }
+  ]
+}

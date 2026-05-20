@@ -1,0 +1,69 @@
+{
+  "function": "minecraft:sequence",
+  "functions": [
+    {
+      "function": "minecraft:set_lore",
+      "entity": "this",
+      "lore": [
+        [
+          {
+            "text": "(",
+            "color": "light_purple",
+            "italic": false
+          },
+          {
+            "translate": "item.minecraft.netherite_helmet",
+            "fallback": "Netherite Helmet"
+          },
+          ")"
+        ]
+      ],
+      "mode": "append"
+    },
+    {
+      "function": "minecraft:set_components",
+      "components": {
+        "minecraft:repairable": {
+          "items": [
+            "minecraft:netherite_ingot",
+            "minecraft:netherite_helmet"
+          ]
+        },
+        "minecraft:max_damage": 407
+      }
+    },
+    {
+      "function": "minecraft:set_attributes",
+      "modifiers": [
+        {
+          "attribute": "minecraft:armor",
+          "id": "minecraft:armor",
+          "amount": 3,
+          "operation": "add_value",
+          "slot": "head"
+        },
+        {
+          "attribute": "minecraft:armor_toughness",
+          "id": "minecraft:armor_toughness",
+          "amount": 3,
+          "operation": "add_value",
+          "slot": "head"
+        },
+        {
+          "attribute": "minecraft:knockback_resistance",
+          "id": "minecraft:knockback_resistance",
+          "amount": 0.1,
+          "operation": "add_value",
+          "slot": "head"
+        }
+      ],
+      "replace": true
+    },
+    {
+      "function": "minecraft:set_custom_data",
+      "tag": {
+        "hatcraft.helmet_type": "netherite_helmet"
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "function": "minecraft:sequence",
+  "functions": [
+    {
+      "function": "minecraft:set_lore",
+      "entity": "this",
+      "lore": [
+        [
+          {
+            "text": "(",
+            "color": "light_purple",
+            "italic": false
+          },
+          {
+            "translate": "item.minecraft.iron_helmet",
+            "fallback": "Iron Helmet"
+          },
+          ")"
+        ]
+      ],
+      "mode": "append"
+    },
+    {
+      "function": "minecraft:set_components",
+      "components": {
+        "minecraft:repairable": {
+          "items": [
+            "minecraft:iron_ingot",
+            "minecraft:iron_helmet"
+          ]
+        },
+        "minecraft:max_damage": 165
+      }
+    },
+    {
+      "function": "minecraft:set_attributes",
+      "modifiers": [
+        {
+          "attribute": "minecraft:armor",
+          "id": "minecraft:armor",
+          "amount": 2,
+          "operation": "add_value",
+          "slot": "head"
+        }
+      ],
+      "replace": true
+    },
+    {
+      "function": "minecraft:set_custom_data",
+      "tag": {
+        "hatcraft.helmet_type": "iron_helmet"
+      }
+    }
+  ]
+}

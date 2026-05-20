@@ -3,11 +3,7 @@ execute if data entity @s {Item:{components:{"minecraft:custom_data":{hatcraft.i
 
 
 # set components
-data merge entity @s {Item:{components:{\
-    "minecraft:equippable":{slot:"head"},\
-    "minecraft:lore":[{"italic":false,"color":"light_purple","text":"Equippable as a hat"}],\
-    "minecraft:custom_data":{hatcraft.is_hat:1b,hatcraft.is_simple_hat:1b,hatcraft.is_helmet_hat:0b}\
-}}}
+item modify entity @s contents hatcraft:simple_hat
 
 
 # announce to owner

@@ -1,6 +1,6 @@
 # conditions
 execute unless data entity @s {Item:{count:1}} run return fail
-execute on origin run function hatcraft:make_hat/helmet_type/detect
+execute on origin run function hatcraft:make_hat/detect_helmet_type
 execute if score helmet_type hatcraft.vars matches 0 run return fail
 
 
@@ -9,38 +9,24 @@ execute on origin run tag @s add hatcraft.helmet_owner
 
 
 # set initial components
-data merge entity @s {Item:{components:{\
-    "minecraft:equippable":{slot:"head"},\
-    "minecraft:lore":[\
-        {"italic":false,"color":"light_purple","text":"Equippable as a helmet"},\
-        [{"italic":false,"color":"light_purple","text":"("},{"text":")"}],\
-    ],\
-    "minecraft:enchantment_glint_override":false,\
-    "minecraft:max_damage":1,\
-    "minecraft:damage":0,\
-    "minecraft:max_stack_size":1,\
-    "minecraft:repairable":{items:[]},\
-    "minecraft:repair_cost":0,\
-    "minecraft:attribute_modifiers":[{id:"armor",type:"armor",amount:1,operation:"add_value",slot:"head"}],\
-    "minecraft:custom_data":{hatcraft.is_hat:1b,hatcraft.is_simple_hat:0b,hatcraft.is_helmet_hat:1b}\
-}}}
+item modify entity @s contents hatcraft:helmet_hat
 
 
 # add components based on type
 execute if score helmet_type hatcraft.vars matches 100 run \
-    function hatcraft:make_hat/helmet_type/set_leather
+    item modify entity @s contents hatcraft:helmet_type/set_leather
 execute if score helmet_type hatcraft.vars matches 200 run \
-    function hatcraft:make_hat/helmet_type/set_golden
+    item modify entity @s contents hatcraft:helmet_type/set_golden
 execute if score helmet_type hatcraft.vars matches 300 run \
-    function hatcraft:make_hat/helmet_type/set_copper
+    item modify entity @s contents hatcraft:helmet_type/set_copper
 execute if score helmet_type hatcraft.vars matches 400 run \
-    function hatcraft:make_hat/helmet_type/set_chainmail
+    item modify entity @s contents hatcraft:helmet_type/set_chainmail
 execute if score helmet_type hatcraft.vars matches 500 run \
-    function hatcraft:make_hat/helmet_type/set_iron
+    item modify entity @s contents hatcraft:helmet_type/set_iron
 execute if score helmet_type hatcraft.vars matches 600 run \
-    function hatcraft:make_hat/helmet_type/set_diamond
+    item modify entity @s contents hatcraft:helmet_type/set_diamond
 execute if score helmet_type hatcraft.vars matches 700 run \
-    function hatcraft:make_hat/helmet_type/set_netherite
+    item modify entity @s contents hatcraft:helmet_type/set_netherite
 
 
 # remove old components
