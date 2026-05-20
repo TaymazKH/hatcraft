@@ -3,7 +3,7 @@ import zipfile
 
 
 items_to_zip = ["data", "pack.mcmeta", "pack.png"]
-output_filename = f"Hatcraft_{input('game version: ')}_v{input('pack version: ')}.zip"
+output_filename = f"Hatcraft_v{input('version: ')}.zip"
 
 
 with zipfile.ZipFile(output_filename, 'w', zipfile.ZIP_DEFLATED) as zipf:

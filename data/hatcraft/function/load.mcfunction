@@ -1,6 +1,6 @@
 # initialize scoreboard
 scoreboard objectives add hatcraft.vars dummy
-scoreboard players set helmet_type hatcraft.vars 0
+scoreboard players set hatcraft.helmet_type hatcraft.vars 0
 
 
 # initialize main loop

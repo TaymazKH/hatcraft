@@ -1,5 +1,5 @@
 # convertion to hat
-execute as @e[type=minecraft:item] at @s run function hatcraft:detect_work_station
+execute as @e[type=minecraft:item] at @s run function hatcraft:make_hat/detect_work_station
 
 
 # holding helmet-hat warning
